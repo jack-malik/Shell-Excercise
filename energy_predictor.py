@@ -145,9 +145,9 @@ def main(argv):
     plt.show()
 
     # Compute common erros for timeseries datasets
-    logger_.info('Mean Absolute Error:', metrics.mean_absolute_error(y_test, y_pred))
-    logger_.info('Mean Squared Error:', metrics.mean_squared_error(y_test, y_pred))
-    logger_.info('Root Mean Squared Error:', np.sqrt(metrics.mean_squared_error(y_test, y_pred)))
+    logger_.info("Mean Absolute Error: {}".format(metrics.mean_absolute_error(y_test, y_pred)))
+    logger_.info("Mean Squared Error: {}".format(metrics.mean_squared_error(y_test, y_pred)))
+    logger_.info("Root Mean Squared Error: {}".format(np.sqrt(metrics.mean_squared_error(y_test, y_pred))))
 
     # Create output and write to external file
     new_df = pd.DataFrame({'Date': dates_test.flatten(),
